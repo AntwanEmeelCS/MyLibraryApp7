@@ -1,4 +1,6 @@
 ﻿using MyLibraryApp7.ClassLib;
+using MyLibraryApp7.ClassLib.DapperWork;
+using MyLibraryApp7.ClassLib.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

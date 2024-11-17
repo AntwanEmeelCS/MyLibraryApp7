@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyLibraryApp7.ClassLib
+namespace MyLibraryApp7.ClassLib.Models
 {
     public class ShelfItem
     {

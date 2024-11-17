@@ -53,8 +53,10 @@ namespace MyLibraryApp7
             this.modifyAuthorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAuthorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.picBackground = new System.Windows.Forms.PictureBox();
             this.addNewBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picBackground = new System.Windows.Forms.PictureBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.googleBooksSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
@@ -250,11 +252,21 @@ namespace MyLibraryApp7
             // myBooksToolStripMenuItem
             // 
             this.myBooksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewBookToolStripMenuItem});
+            this.addNewBookToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.googleBooksSearchToolStripMenuItem});
             this.myBooksToolStripMenuItem.Name = "myBooksToolStripMenuItem";
             this.myBooksToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.myBooksToolStripMenuItem.Size = new System.Drawing.Size(150, 36);
             this.myBooksToolStripMenuItem.Text = "My Books";
+            // 
+            // addNewBookToolStripMenuItem
+            // 
+            this.addNewBookToolStripMenuItem.Name = "addNewBookToolStripMenuItem";
+            this.addNewBookToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.addNewBookToolStripMenuItem.Size = new System.Drawing.Size(455, 36);
+            this.addNewBookToolStripMenuItem.Text = "Add New Book";
+            this.addNewBookToolStripMenuItem.Click += new System.EventHandler(this.addNewBookToolStripMenuItem_Click);
             // 
             // picBackground
             // 
@@ -265,13 +277,18 @@ namespace MyLibraryApp7
             this.picBackground.TabIndex = 1;
             this.picBackground.TabStop = false;
             // 
-            // addNewBookToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.addNewBookToolStripMenuItem.Name = "addNewBookToolStripMenuItem";
-            this.addNewBookToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.addNewBookToolStripMenuItem.Size = new System.Drawing.Size(384, 36);
-            this.addNewBookToolStripMenuItem.Text = "Add New Book";
-            this.addNewBookToolStripMenuItem.Click += new System.EventHandler(this.addNewBookToolStripMenuItem_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(452, 6);
+            // 
+            // googleBooksSearchToolStripMenuItem
+            // 
+            this.googleBooksSearchToolStripMenuItem.Name = "googleBooksSearchToolStripMenuItem";
+            this.googleBooksSearchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.googleBooksSearchToolStripMenuItem.Size = new System.Drawing.Size(455, 36);
+            this.googleBooksSearchToolStripMenuItem.Text = "Google Books Search";
+            this.googleBooksSearchToolStripMenuItem.Click += new System.EventHandler(this.googleBooksSearchToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -325,6 +342,8 @@ namespace MyLibraryApp7
         private System.Windows.Forms.ToolStripMenuItem deleteAuthorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem myBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem googleBooksSearchToolStripMenuItem;
     }
 }
 

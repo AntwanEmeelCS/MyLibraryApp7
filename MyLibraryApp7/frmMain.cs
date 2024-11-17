@@ -1,4 +1,5 @@
 ﻿using MyLibraryApp7.ClassLib;
+using MyLibraryApp7.ClassLib.DapperWork;
 using MyLibraryApp7.Forms.Author;
 using MyLibraryApp7.Forms.AuthorNationality;
 using MyLibraryApp7.Forms.Genre;
@@ -334,6 +335,11 @@ namespace MyLibraryApp7
         private void addNewBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmAddMyBook().Show();
+        }
+
+        private void googleBooksSearchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmGoogleBooksSearch().ShowDialog();
         }
     }
 }

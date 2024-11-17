@@ -1,4 +1,5 @@
 ﻿using MyLibraryApp7.ClassLib;
+using MyLibraryApp7.ClassLib.DapperWork;
 using MyLibraryApp7.Forms.Author;
 using MyLibraryApp7.Forms.Genre;
 using MyLibraryApp7.Forms.Publisher;

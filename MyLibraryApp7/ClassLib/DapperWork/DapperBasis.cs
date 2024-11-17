@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper;
 
-namespace MyLibraryApp7.ClassLib
+namespace MyLibraryApp7.ClassLib.DapperWork
 {
     public class DapperBasis
     {

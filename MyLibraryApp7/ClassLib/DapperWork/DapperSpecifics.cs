@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MyLibraryApp7.ClassLib
+namespace MyLibraryApp7.ClassLib.DapperWork
 {
     public class DapperSpecifics: DapperBasis
     {
