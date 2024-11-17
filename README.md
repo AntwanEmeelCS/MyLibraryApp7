@@ -4,6 +4,6 @@ This App Contains a simple library app that records authors, bookshelves and of 
 
 My Project is written in C#.
 
-Feel Free to suugest me any modifications to the code. I'll be happy and grateful for your suggestions!
+Feel Free to suggest me any modifications to the code. I'll be happy and grateful for your suggestions.
 
-Thank You
+Thank You!
