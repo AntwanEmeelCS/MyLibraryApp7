@@ -29,8 +29,13 @@ namespace MyLibraryApp7.Forms.MyBooks
                 {
                     string jsonData = await response.Content.ReadAsStringAsync();
                     GoogleBooksResponse books = JsonConvert.DeserializeObject<GoogleBooksResponse>(jsonData);
-                    //TODO: fill a datagridview with items
-                    MessageBox.Show($"{books.Items.Length} Books Found!");
+                    //fill books
+                    dgvFoundBooks.Rows.Clear();
+                    foreach (GoogleBook item in books.Items)
+                    {
+                        VolumeInfo vol = item.VolumeInfo;
+                        dgvFoundBooks.Rows.Add(vol.Title, vol.GetAuthorName(), vol.Publisher, vol.PublishedDate, vol.GetISBN(), vol.pageCount);
+                    }
                 }
                 else
                 {
