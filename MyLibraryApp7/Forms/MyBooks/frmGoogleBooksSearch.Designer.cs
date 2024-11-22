@@ -41,6 +41,10 @@ namespace MyLibraryApp7.Forms.MyBooks
             this.colPubDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPageCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboShelves = new System.Windows.Forms.ComboBox();
+            this.btnAddSelected = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoundBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,13 +101,14 @@ namespace MyLibraryApp7.Forms.MyBooks
             this.colPublisher,
             this.colPubDate,
             this.colISBN,
-            this.colPageCount});
+            this.colPageCount,
+            this.colGenre});
             this.dgvFoundBooks.Location = new System.Drawing.Point(23, 134);
             this.dgvFoundBooks.Name = "dgvFoundBooks";
             this.dgvFoundBooks.ReadOnly = true;
             this.dgvFoundBooks.RowHeadersWidth = 51;
             this.dgvFoundBooks.RowTemplate.Height = 30;
-            this.dgvFoundBooks.Size = new System.Drawing.Size(970, 424);
+            this.dgvFoundBooks.Size = new System.Drawing.Size(1303, 363);
             this.dgvFoundBooks.TabIndex = 4;
             // 
             // colTitle
@@ -112,7 +117,7 @@ namespace MyLibraryApp7.Forms.MyBooks
             this.colTitle.MinimumWidth = 6;
             this.colTitle.Name = "colTitle";
             this.colTitle.ReadOnly = true;
-            this.colTitle.Width = 150;
+            this.colTitle.Width = 200;
             // 
             // colAuthor
             // 
@@ -120,7 +125,7 @@ namespace MyLibraryApp7.Forms.MyBooks
             this.colAuthor.MinimumWidth = 6;
             this.colAuthor.Name = "colAuthor";
             this.colAuthor.ReadOnly = true;
-            this.colAuthor.Width = 150;
+            this.colAuthor.Width = 200;
             // 
             // colPublisher
             // 
@@ -128,15 +133,15 @@ namespace MyLibraryApp7.Forms.MyBooks
             this.colPublisher.MinimumWidth = 6;
             this.colPublisher.Name = "colPublisher";
             this.colPublisher.ReadOnly = true;
-            this.colPublisher.Width = 150;
+            this.colPublisher.Width = 175;
             // 
             // colPubDate
             // 
-            this.colPubDate.HeaderText = "Publication Date";
+            this.colPubDate.HeaderText = "Pub. Date";
             this.colPubDate.MinimumWidth = 6;
             this.colPubDate.Name = "colPubDate";
             this.colPubDate.ReadOnly = true;
-            this.colPubDate.Width = 150;
+            this.colPubDate.Width = 170;
             // 
             // colISBN
             // 
@@ -144,21 +149,61 @@ namespace MyLibraryApp7.Forms.MyBooks
             this.colISBN.MinimumWidth = 6;
             this.colISBN.Name = "colISBN";
             this.colISBN.ReadOnly = true;
-            this.colISBN.Width = 150;
+            this.colISBN.Width = 175;
             // 
             // colPageCount
             // 
-            this.colPageCount.HeaderText = "Page Count";
+            this.colPageCount.HeaderText = "Pages";
             this.colPageCount.MinimumWidth = 6;
             this.colPageCount.Name = "colPageCount";
             this.colPageCount.ReadOnly = true;
-            this.colPageCount.Width = 150;
+            this.colPageCount.Width = 125;
+            // 
+            // colGenre
+            // 
+            this.colGenre.HeaderText = "Genre";
+            this.colGenre.MinimumWidth = 6;
+            this.colGenre.Name = "colGenre";
+            this.colGenre.ReadOnly = true;
+            this.colGenre.Width = 175;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(44, 525);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 32);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Choose Shelf";
+            // 
+            // cboShelves
+            // 
+            this.cboShelves.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboShelves.FormattingEnabled = true;
+            this.cboShelves.Location = new System.Drawing.Point(231, 522);
+            this.cboShelves.Name = "cboShelves";
+            this.cboShelves.Size = new System.Drawing.Size(373, 39);
+            this.cboShelves.TabIndex = 6;
+            this.cboShelves.SelectedIndexChanged += new System.EventHandler(this.cboShelves_SelectedIndexChanged);
+            // 
+            // btnAddSelected
+            // 
+            this.btnAddSelected.Location = new System.Drawing.Point(628, 522);
+            this.btnAddSelected.Name = "btnAddSelected";
+            this.btnAddSelected.Size = new System.Drawing.Size(192, 44);
+            this.btnAddSelected.TabIndex = 7;
+            this.btnAddSelected.Text = "Add to Shelf";
+            this.btnAddSelected.UseVisualStyleBackColor = true;
+            this.btnAddSelected.Click += new System.EventHandler(this.btnAddSelected_Click);
             // 
             // frmGoogleBooksSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 570);
+            this.ClientSize = new System.Drawing.Size(1338, 597);
+            this.Controls.Add(this.btnAddSelected);
+            this.Controls.Add(this.cboShelves);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvFoundBooks);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearchTitle);
@@ -173,6 +218,7 @@ namespace MyLibraryApp7.Forms.MyBooks
             this.Name = "frmGoogleBooksSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Google Books Search";
+            this.Load += new System.EventHandler(this.frmGoogleBooksSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoundBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,5 +239,9 @@ namespace MyLibraryApp7.Forms.MyBooks
         private System.Windows.Forms.DataGridViewTextBoxColumn colPubDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colISBN;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPageCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGenre;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboShelves;
+        private System.Windows.Forms.Button btnAddSelected;
     }
 }

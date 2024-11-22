@@ -15,39 +15,47 @@ namespace MyLibraryApp7.ClassLib.GoogleBooksAPI
         public string PublishedDate { get; set; }
         public IndustryIdentifier[] IndustryIdentifiers { get; set; }
         public int pageCount { get; set; }
+        public string[] categories { get; set; }
         public string GetAuthorName()
         {
-            if (Authors.Length == 1)
+            if (Authors!=null)
             {
-                return Authors[0];
-            }
-            else if (Authors.Length > 1)
-            {
-                string FirstAuthorName = "";
-                Regex arabicRegex = new Regex(@"\p{IsArabic}");
-                foreach (string item in Authors)
+                if (Authors.Length == 1)
                 {
-                    if (arabicRegex.IsMatch(item))
+                    return Authors[0];
+                }
+                else if (Authors.Length > 1)
+                {
+                    string FirstAuthorName = "";
+                    Regex arabicRegex = new Regex(@"\p{IsArabic}");
+                    foreach (string item in Authors)
                     {
-                        if (FirstAuthorName=="")
+                        if (arabicRegex.IsMatch(item))
                         {
-                            FirstAuthorName = item;
-                        }
-                        else
-                        {
-                            return "مجموعة مؤلفين";
+                            if (FirstAuthorName == "")
+                            {
+                                FirstAuthorName = item;
+                            }
+                            else
+                            {
+                                return "مجموعة مؤلفين";
+                            }
                         }
                     }
-                }
-                if (FirstAuthorName=="")
-                {
-                    return "مؤلف غير معروف";
+                    if (FirstAuthorName == "")
+                    {
+                        return "مؤلف غير معروف";
+                    }
+                    else
+                    {
+                        return FirstAuthorName;
+                    }
+
                 }
                 else
                 {
-                    return FirstAuthorName;
-                }
-                
+                    return "مؤلف غير معروف";
+                } 
             }
             else
             {
@@ -77,6 +85,46 @@ namespace MyLibraryApp7.ClassLib.GoogleBooksAPI
                 }
             }
             return "";
+        }
+        public string GetGenre()
+        {
+            if (categories!=null)
+            {
+                if (categories.Length != 0)
+                {
+                    return categories[0];
+                }
+                else
+                {
+                    return "";
+                } 
+            }
+            else
+            {
+                return "";
+            }
+        }
+        public string GetPublisherName()
+        {
+            if (Publisher == null || Publisher.Length == 0)
+            {
+                return "ناشر غير معروف";
+            }
+            else
+            {
+                return Publisher;
+            }
+        }
+        public string GetPublicationDate()
+        {
+            if (PublishedDate == null || PublishedDate.Length == 0)
+            {
+                return "1900-01-01";
+            }
+            else
+            {
+                return PublishedDate;
+            }
         }
     }
 }
