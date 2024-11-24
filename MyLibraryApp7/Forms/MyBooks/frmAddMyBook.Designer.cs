@@ -197,7 +197,7 @@ namespace MyLibraryApp7.Forms.MyBooks
             // 
             this.updPageCount.Location = new System.Drawing.Point(248, 312);
             this.updPageCount.Maximum = new decimal(new int[] {
-            1000,
+            2500,
             0,
             0,
             0});
