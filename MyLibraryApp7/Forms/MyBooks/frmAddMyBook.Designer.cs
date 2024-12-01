@@ -52,6 +52,10 @@ namespace MyLibraryApp7.Forms.MyBooks
             this.btnAddPublisher = new System.Windows.Forms.Button();
             this.btnAddGenre = new System.Windows.Forms.Button();
             this.btnAddShelf = new System.Windows.Forms.Button();
+            this.btnSearchShelf = new System.Windows.Forms.Button();
+            this.btnSearchGenre = new System.Windows.Forms.Button();
+            this.btnSearchPublisher = new System.Windows.Forms.Button();
+            this.btnSearchAuthor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.updPageCount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -288,13 +292,61 @@ namespace MyLibraryApp7.Forms.MyBooks
             this.btnAddShelf.UseVisualStyleBackColor = true;
             this.btnAddShelf.Click += new System.EventHandler(this.btnAddShelf_Click);
             // 
+            // btnSearchShelf
+            // 
+            this.btnSearchShelf.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSearchShelf.Location = new System.Drawing.Point(914, 352);
+            this.btnSearchShelf.Name = "btnSearchShelf";
+            this.btnSearchShelf.Size = new System.Drawing.Size(158, 50);
+            this.btnSearchShelf.TabIndex = 38;
+            this.btnSearchShelf.Text = "Search...";
+            this.btnSearchShelf.UseVisualStyleBackColor = true;
+            this.btnSearchShelf.Click += new System.EventHandler(this.btnSearchShelf_Click);
+            // 
+            // btnSearchGenre
+            // 
+            this.btnSearchGenre.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSearchGenre.Location = new System.Drawing.Point(914, 257);
+            this.btnSearchGenre.Name = "btnSearchGenre";
+            this.btnSearchGenre.Size = new System.Drawing.Size(158, 50);
+            this.btnSearchGenre.TabIndex = 37;
+            this.btnSearchGenre.Text = "Search...";
+            this.btnSearchGenre.UseVisualStyleBackColor = true;
+            this.btnSearchGenre.Click += new System.EventHandler(this.btnSearchGenre_Click);
+            // 
+            // btnSearchPublisher
+            // 
+            this.btnSearchPublisher.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSearchPublisher.Location = new System.Drawing.Point(914, 160);
+            this.btnSearchPublisher.Name = "btnSearchPublisher";
+            this.btnSearchPublisher.Size = new System.Drawing.Size(158, 50);
+            this.btnSearchPublisher.TabIndex = 36;
+            this.btnSearchPublisher.Text = "Search...";
+            this.btnSearchPublisher.UseVisualStyleBackColor = true;
+            this.btnSearchPublisher.Click += new System.EventHandler(this.btnSearchPublisher_Click);
+            // 
+            // btnSearchAuthor
+            // 
+            this.btnSearchAuthor.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSearchAuthor.Location = new System.Drawing.Point(914, 63);
+            this.btnSearchAuthor.Name = "btnSearchAuthor";
+            this.btnSearchAuthor.Size = new System.Drawing.Size(158, 50);
+            this.btnSearchAuthor.TabIndex = 35;
+            this.btnSearchAuthor.Text = "Search...";
+            this.btnSearchAuthor.UseVisualStyleBackColor = true;
+            this.btnSearchAuthor.Click += new System.EventHandler(this.btnSearchAuthor_Click);
+            // 
             // frmAddMyBook
             // 
             this.AcceptButton = this.btnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(916, 520);
+            this.ClientSize = new System.Drawing.Size(1099, 520);
+            this.Controls.Add(this.btnSearchShelf);
+            this.Controls.Add(this.btnSearchGenre);
+            this.Controls.Add(this.btnSearchPublisher);
+            this.Controls.Add(this.btnSearchAuthor);
             this.Controls.Add(this.btnAddShelf);
             this.Controls.Add(this.btnAddGenre);
             this.Controls.Add(this.btnAddPublisher);
@@ -358,5 +410,9 @@ namespace MyLibraryApp7.Forms.MyBooks
         private System.Windows.Forms.Button btnAddPublisher;
         private System.Windows.Forms.Button btnAddGenre;
         private System.Windows.Forms.Button btnAddShelf;
+        private System.Windows.Forms.Button btnSearchShelf;
+        private System.Windows.Forms.Button btnSearchGenre;
+        private System.Windows.Forms.Button btnSearchPublisher;
+        private System.Windows.Forms.Button btnSearchAuthor;
     }
 }

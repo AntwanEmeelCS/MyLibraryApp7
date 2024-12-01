@@ -167,6 +167,12 @@
     <Compile Include="Forms\Publisher\frmModifyPublisher.Designer.cs">
       <DependentUpon>frmModifyPublisher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SearchForms\frmLookupSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchForms\frmLookupSearch.Designer.cs">
+      <DependentUpon>frmLookupSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Shelves\frmAddShelf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Publisher\frmModifyPublisher.resx">
       <DependentUpon>frmModifyPublisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchForms\frmLookupSearch.resx">
+      <DependentUpon>frmLookupSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Shelves\frmAddShelf.resx">
       <DependentUpon>frmAddShelf.cs</DependentUpon>

@@ -3,6 +3,7 @@ using MyLibraryApp7.ClassLib.DapperWork;
 using MyLibraryApp7.Forms.Author;
 using MyLibraryApp7.Forms.Genre;
 using MyLibraryApp7.Forms.Publisher;
+using MyLibraryApp7.Forms.SearchForms;
 using MyLibraryApp7.Forms.Shelves;
 using System;
 using System.Collections.Generic;
@@ -181,6 +182,30 @@ namespace MyLibraryApp7.Forms.MyBooks
                 DapperSpecifics ds = new DapperSpecifics();
                 ds.FillShelves(cboShelves);
             }
+        }
+
+        private void btnSearchAuthor_Click(object sender, EventArgs e)
+        {
+            frmLookupSearch frmSearchAuthor = new frmLookupSearch("Author", "AuthorID", "AuthorName");
+            frmSearchAuthor.ShowDialog(this);
+        }
+
+        private void btnSearchPublisher_Click(object sender, EventArgs e)
+        {
+            frmLookupSearch frmSearchPublisher = new frmLookupSearch("Publisher", "PublisherID", "PublisherName");
+            frmSearchPublisher.ShowDialog(this);
+        }
+
+        private void btnSearchGenre_Click(object sender, EventArgs e)
+        {
+            frmLookupSearch frmSearchGenre = new frmLookupSearch("Genre", "GenreID", "GenreName");
+            frmSearchGenre.ShowDialog(this);
+        }
+
+        private void btnSearchShelf_Click(object sender, EventArgs e)
+        {
+            frmLookupSearch frmSearchShelf = new frmLookupSearch("Shelves", "ShelfID", "ShelfName");
+            frmSearchShelf.ShowDialog(this);
         }
     }
 }
