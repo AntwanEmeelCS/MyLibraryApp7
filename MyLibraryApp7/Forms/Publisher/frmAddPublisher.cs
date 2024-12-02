@@ -1,5 +1,6 @@
 ﻿using MyLibraryApp7.ClassLib;
 using MyLibraryApp7.ClassLib.DapperWork;
+using MyLibraryApp7.Forms.PublisherLocation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,6 +55,7 @@ namespace MyLibraryApp7.Forms.Publisher
                     DapperBasis db = new DapperBasis();
                     int rowsAffected = db.ExecuteQuery(qryAddNewPublisher, paramAddNewPublisher);
                     MessageBox.Show($"Publisher {paramAddNewPublisher.PublisherName} Added Successfully.");
+                    this.Close();
                     this.DialogResult = DialogResult.OK;
                 }
                 catch (Exception ex)
@@ -64,6 +66,19 @@ namespace MyLibraryApp7.Forms.Publisher
             else
             {
                 MessageBox.Show("Please Enter a Valid Publisher Name.");
+            }
+        }
+
+        private void btnAddLocation_Click(object sender, EventArgs e)
+        {
+            using (frmAddLocation frm = new frmAddLocation())
+            {
+                DialogResult res = frm.ShowDialog();
+                if (res == DialogResult.OK)
+                {
+                    DapperSpecifics ds = new DapperSpecifics();
+                    ds.FillLocations(cboLocations);
+                }
             }
         }
     }

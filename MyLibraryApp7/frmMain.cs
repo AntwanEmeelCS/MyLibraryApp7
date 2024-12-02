@@ -304,7 +304,7 @@ namespace MyLibraryApp7
 
         private void addPublisherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmAddPublisher().ShowDialog();
+            new frmAddPublisher().Show();
         }
 
         private void modifyPublisherToolStripMenuItem_Click(object sender, EventArgs e)
@@ -319,7 +319,7 @@ namespace MyLibraryApp7
 
         private void addAuthorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmAddAuthor().ShowDialog();
+            new frmAddAuthor().Show();
         }
 
         private void modifyAuthorToolStripMenuItem_Click(object sender, EventArgs e)

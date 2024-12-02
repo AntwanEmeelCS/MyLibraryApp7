@@ -35,12 +35,13 @@ namespace MyLibraryApp7.Forms.Publisher
             this.label2 = new System.Windows.Forms.Label();
             this.txtPublisherName = new System.Windows.Forms.TextBox();
             this.cboLocations = new System.Windows.Forms.ComboBox();
+            this.btnAddLocation = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(363, 147);
+            this.btnCancel.Location = new System.Drawing.Point(466, 147);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(158, 50);
             this.btnCancel.TabIndex = 11;
@@ -94,13 +95,25 @@ namespace MyLibraryApp7.Forms.Publisher
             this.cboLocations.TabIndex = 15;
             this.cboLocations.SelectedIndexChanged += new System.EventHandler(this.cboLocations_SelectedIndexChanged);
             // 
+            // btnAddLocation
+            // 
+            this.btnAddLocation.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAddLocation.Location = new System.Drawing.Point(647, 62);
+            this.btnAddLocation.Name = "btnAddLocation";
+            this.btnAddLocation.Size = new System.Drawing.Size(158, 50);
+            this.btnAddLocation.TabIndex = 32;
+            this.btnAddLocation.Text = "Add...";
+            this.btnAddLocation.UseVisualStyleBackColor = true;
+            this.btnAddLocation.Click += new System.EventHandler(this.btnAddLocation_Click);
+            // 
             // frmAddPublisher
             // 
             this.AcceptButton = this.btnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(665, 232);
+            this.ClientSize = new System.Drawing.Size(817, 232);
+            this.Controls.Add(this.btnAddLocation);
             this.Controls.Add(this.cboLocations);
             this.Controls.Add(this.txtPublisherName);
             this.Controls.Add(this.label2);
@@ -129,5 +142,6 @@ namespace MyLibraryApp7.Forms.Publisher
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPublisherName;
         private System.Windows.Forms.ComboBox cboLocations;
+        private System.Windows.Forms.Button btnAddLocation;
     }
 }

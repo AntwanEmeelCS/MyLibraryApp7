@@ -1,5 +1,6 @@
 ﻿using MyLibraryApp7.ClassLib;
 using MyLibraryApp7.ClassLib.DapperWork;
+using MyLibraryApp7.Forms.AuthorNationality;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -66,6 +67,19 @@ namespace MyLibraryApp7.Forms.Author
             else
             {
                 MessageBox.Show("Please Enter a Valid Author Name.");
+            }
+        }
+
+        private void btnAddNationality_Click(object sender, EventArgs e)
+        {
+            using (frmAddNationality frm = new frmAddNationality())
+            {
+                DialogResult res = frm.ShowDialog();
+                if (res == DialogResult.OK)
+                {
+                    DapperSpecifics ds = new DapperSpecifics();
+                    ds.FillNationalities(cboNationality);
+                }
             }
         }
     }

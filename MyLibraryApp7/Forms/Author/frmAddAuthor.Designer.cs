@@ -35,12 +35,13 @@ namespace MyLibraryApp7.Forms.Author
             this.label2 = new System.Windows.Forms.Label();
             this.txtAuthorName = new System.Windows.Forms.TextBox();
             this.cboNationality = new System.Windows.Forms.ComboBox();
+            this.btnAddNationality = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(363, 147);
+            this.btnCancel.Location = new System.Drawing.Point(463, 147);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(158, 50);
             this.btnCancel.TabIndex = 11;
@@ -94,13 +95,24 @@ namespace MyLibraryApp7.Forms.Author
             this.cboNationality.TabIndex = 15;
             this.cboNationality.SelectedIndexChanged += new System.EventHandler(this.cboNationalities_SelectedIndexChanged);
             // 
+            // btnAddNationality
+            // 
+            this.btnAddNationality.Location = new System.Drawing.Point(640, 62);
+            this.btnAddNationality.Name = "btnAddNationality";
+            this.btnAddNationality.Size = new System.Drawing.Size(159, 50);
+            this.btnAddNationality.TabIndex = 16;
+            this.btnAddNationality.Text = "Add...";
+            this.btnAddNationality.UseVisualStyleBackColor = true;
+            this.btnAddNationality.Click += new System.EventHandler(this.btnAddNationality_Click);
+            // 
             // frmAddAuthor
             // 
             this.AcceptButton = this.btnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(665, 232);
+            this.ClientSize = new System.Drawing.Size(821, 232);
+            this.Controls.Add(this.btnAddNationality);
             this.Controls.Add(this.cboNationality);
             this.Controls.Add(this.txtAuthorName);
             this.Controls.Add(this.label2);
@@ -129,5 +141,6 @@ namespace MyLibraryApp7.Forms.Author
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAuthorName;
         private System.Windows.Forms.ComboBox cboNationality;
+        private System.Windows.Forms.Button btnAddNationality;
     }
 }
