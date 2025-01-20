@@ -341,5 +341,49 @@ namespace MyLibraryApp7
         {
             new frmGoogleBooksSearch().ShowDialog();
         }
+        private int CountFilesWithPattern(string folderPath, string searchString)
+        {
+            if (!Directory.Exists(folderPath))
+                throw new DirectoryNotFoundException($"The folder path '{folderPath}' does not exist.");
+
+            // Using wildcard pattern for substring match
+            string searchPattern = $"*{searchString}*";
+            string[] files = Directory.GetFiles(folderPath, searchPattern, SearchOption.TopDirectoryOnly);
+
+            return files.Length; // Simply count the results
+        }
+        private void backupDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string targetFolder = Application.StartupPath + "\\assets\\Database Backups";
+            if (!Directory.Exists(targetFolder))
+            {
+                Directory.CreateDirectory(targetFolder);
+            }
+            DateTime now = DateTime.Now;
+            string targetFileName = $"MyLibraryApp7 - {now.ToString("yyyy-MM-dd")}";
+            int fileCount = CountFilesWithPattern(targetFolder, targetFileName);
+            string targetFullName = "";
+            if (fileCount==0)
+            {
+                targetFullName = targetFolder + "\\" + targetFileName + ".db";
+            }
+            else
+            {
+                targetFullName = targetFolder + "\\" + targetFileName + " - " + (fileCount+1).ToString() +".db";
+            }
+            try
+            {
+                File.Copy(DapperBasis.db_path, targetFullName);
+                MessageBox.Show("Backup Succeeded!\n" + targetFullName);
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("IO Exception Thrown\n" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("General Exception Thrown\n" + ex.Message);
+            }
+        }
     }
 }

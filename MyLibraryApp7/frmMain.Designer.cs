@@ -54,9 +54,11 @@ namespace MyLibraryApp7
             this.deleteAuthorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.picBackground = new System.Windows.Forms.PictureBox();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.googleBooksSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picBackground = new System.Windows.Forms.PictureBox();
+            this.backupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +69,8 @@ namespace MyLibraryApp7
             this.mnuStripMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.assetsToolStripMenuItem,
-            this.myBooksToolStripMenuItem});
+            this.myBooksToolStripMenuItem,
+            this.backupsToolStripMenuItem});
             this.mnuStripMain.Location = new System.Drawing.Point(0, 0);
             this.mnuStripMain.Name = "mnuStripMain";
             this.mnuStripMain.Size = new System.Drawing.Size(782, 40);
@@ -268,15 +271,6 @@ namespace MyLibraryApp7
             this.addNewBookToolStripMenuItem.Text = "Add New Book";
             this.addNewBookToolStripMenuItem.Click += new System.EventHandler(this.addNewBookToolStripMenuItem_Click);
             // 
-            // picBackground
-            // 
-            this.picBackground.Location = new System.Drawing.Point(12, 43);
-            this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(289, 239);
-            this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBackground.TabIndex = 1;
-            this.picBackground.TabStop = false;
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -289,6 +283,30 @@ namespace MyLibraryApp7
             this.googleBooksSearchToolStripMenuItem.Size = new System.Drawing.Size(455, 36);
             this.googleBooksSearchToolStripMenuItem.Text = "Google Books Search";
             this.googleBooksSearchToolStripMenuItem.Click += new System.EventHandler(this.googleBooksSearchToolStripMenuItem_Click);
+            // 
+            // picBackground
+            // 
+            this.picBackground.Location = new System.Drawing.Point(12, 43);
+            this.picBackground.Name = "picBackground";
+            this.picBackground.Size = new System.Drawing.Size(289, 239);
+            this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBackground.TabIndex = 1;
+            this.picBackground.TabStop = false;
+            // 
+            // backupsToolStripMenuItem
+            // 
+            this.backupsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backupDatabaseToolStripMenuItem});
+            this.backupsToolStripMenuItem.Name = "backupsToolStripMenuItem";
+            this.backupsToolStripMenuItem.Size = new System.Drawing.Size(133, 36);
+            this.backupsToolStripMenuItem.Text = "Backups";
+            // 
+            // backupDatabaseToolStripMenuItem
+            // 
+            this.backupDatabaseToolStripMenuItem.Name = "backupDatabaseToolStripMenuItem";
+            this.backupDatabaseToolStripMenuItem.Size = new System.Drawing.Size(314, 36);
+            this.backupDatabaseToolStripMenuItem.Text = "Backup Database";
+            this.backupDatabaseToolStripMenuItem.Click += new System.EventHandler(this.backupDatabaseToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -344,6 +362,8 @@ namespace MyLibraryApp7
         private System.Windows.Forms.ToolStripMenuItem addNewBookToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem googleBooksSearchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backupsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backupDatabaseToolStripMenuItem;
     }
 }
 
