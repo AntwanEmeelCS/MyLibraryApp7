@@ -385,5 +385,10 @@ namespace MyLibraryApp7
                 MessageBox.Show("General Exception Thrown\n" + ex.Message);
             }
         }
+
+        private void modifyBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmModifyBook().Show();
+        }
     }
 }

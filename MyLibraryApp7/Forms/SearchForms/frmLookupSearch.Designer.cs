@@ -51,7 +51,7 @@ namespace MyLibraryApp7.Forms.SearchForms
             // 
             this.txtSearchKeyword.Location = new System.Drawing.Point(243, 19);
             this.txtSearchKeyword.Name = "txtSearchKeyword";
-            this.txtSearchKeyword.Size = new System.Drawing.Size(325, 39);
+            this.txtSearchKeyword.Size = new System.Drawing.Size(407, 39);
             this.txtSearchKeyword.TabIndex = 1;
             this.txtSearchKeyword.TextChanged += new System.EventHandler(this.txtSearchKeyword_TextChanged);
             // 
@@ -99,14 +99,14 @@ namespace MyLibraryApp7.Forms.SearchForms
             this.dgvSearchResults.RowHeadersWidth = 51;
             this.dgvSearchResults.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvSearchResults.RowTemplate.Height = 30;
-            this.dgvSearchResults.Size = new System.Drawing.Size(538, 376);
+            this.dgvSearchResults.Size = new System.Drawing.Size(827, 376);
             this.dgvSearchResults.TabIndex = 5;
             // 
             // frmLookupSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 535);
+            this.ClientSize = new System.Drawing.Size(869, 535);
             this.Controls.Add(this.dgvSearchResults);
             this.Controls.Add(this.rdbTableString);
             this.Controls.Add(this.rdbTableID);
