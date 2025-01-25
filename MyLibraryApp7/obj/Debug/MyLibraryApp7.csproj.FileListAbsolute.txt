@@ -39,3 +39,4 @@ E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\bin\Debug\Newtonsoft.Jso
 E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\obj\Debug\MyLibraryApp7.Forms.MyBooks.frmGoogleBooksSearch.resources
 E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\obj\Debug\MyLibraryApp7.Forms.SearchForms.frmLookupSearch.resources
 E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\obj\Debug\MyLibraryApp7.Forms.MyBooks.frmModifyBook.resources
+E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\obj\Debug\MyLibraryApp7.csproj.AssemblyReference.cache

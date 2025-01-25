@@ -82,7 +82,8 @@
     <Compile Include="ClassLib\GoogleBooksAPI\GoogleBooksResponse.cs" />
     <Compile Include="ClassLib\GoogleBooksAPI\IndustryIdentifier.cs" />
     <Compile Include="ClassLib\GoogleBooksAPI\VolumeInfo.cs" />
-    <Compile Include="ClassLib\Models\ModifyBookModel.cs" />
+    <Compile Include="ClassLib\Models\BookModel.cs" />
+    <Compile Include="ClassLib\Models\BookModificationRecord.cs" />
     <Compile Include="ClassLib\Models\ShelfItem.cs" />
     <Compile Include="Forms\AuthorNationality\frmAddNationality.cs">
       <SubType>Form</SubType>

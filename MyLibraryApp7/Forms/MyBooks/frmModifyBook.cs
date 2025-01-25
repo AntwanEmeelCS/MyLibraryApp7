@@ -98,7 +98,26 @@ namespace MyLibraryApp7.Forms.MyBooks
                 {
                     try
                     {
-                        string qryAddBook = @"
+                        //calculate modifications
+                        BookModel initial = GetBookInfo(int.Parse(txtBookID.Text));
+                        BookModel changed = new BookModel
+                        {
+                            BookID = int.Parse(txtBookID.Text),
+                            AuthorID = int.Parse(this.ChosenAuthor.TableID),
+                            BookISBN = txtISBN.Text,
+                            BookTitle = txtBookTitle.Text,
+                            GenreID = int.Parse(this.ChosenGenre.TableID),
+                            Pages = int.Parse(updPageCount.Value.ToString()),
+                            PublicationDate = txtPublicationDate.Text,
+                            PublisherID = int.Parse(this.ChosenPublisher.TableID),
+                            ShelfID = int.Parse(this.ChosenShelf.TableID)
+                        };
+                        List<BookModificationRecord> mods = BookModel.CompareModifications(initial, changed);
+                        //update book if necessary
+                        if (mods.Count>0)
+                        {
+                            //main update
+                            string qryAddBook = @"
 UPDATE MyBooks
 SET	BookTitle=@BookTitle,
 	AuthorID=@AuthorID,
@@ -110,25 +129,35 @@ SET	BookTitle=@BookTitle,
 	ShelfID=@ShelfID,
 	DateLastModified=@DateLastModified
 WHERE BookID=@BookID";
-                        var paramAddBook = new
+                            var paramAddBook = new
+                            {
+                                BookID = int.Parse(txtBookID.Text),
+                                BookTitle = txtBookTitle.Text,
+                                AuthorID = this.ChosenAuthor.TableID,
+                                BookISBN = txtISBN.Text.Length == 0 ? null : txtISBN.Text,
+                                PublisherID = this.ChosenPublisher.TableID,
+                                PublicationDate = txtPublicationDate.Text,
+                                GenreID = this.ChosenGenre.TableID,
+                                Pages = Convert.ToInt32(updPageCount.Value),
+                                ShelfID = this.ChosenShelf.TableID,
+                                DateLastModified = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.FFF")
+                            };
+                            DapperBasis db = new DapperBasis();
+                            int rowsAffected = db.ExecuteQuery(qryAddBook, paramAddBook);
+                            //record modifications itself
+                            foreach (BookModificationRecord item in mods)
+                            {
+                                item.RecordModificationField();
+                            }
+                            //success
+                            DialogResult result = MessageBox.Show($"Book {txtBookTitle.Text} was updated Successfully.", "MyLibraryApp7", MessageBoxButtons.OK);
+                            this.DialogResult = DialogResult.OK;
+                            this.Close(); 
+                        }
+                        else
                         {
-                            BookID = int.Parse(txtBookID.Text),
-                            BookTitle = txtBookTitle.Text,
-                            AuthorID = this.ChosenAuthor.TableID,
-                            BookISBN = txtISBN.Text.Length == 0 ? null : txtISBN.Text,
-                            PublisherID = this.ChosenPublisher.TableID,
-                            PublicationDate = txtPublicationDate.Text,
-                            GenreID = this.ChosenGenre.TableID,
-                            Pages = Convert.ToInt32(updPageCount.Value),
-                            ShelfID = this.ChosenShelf.TableID,
-                            DateLastModified = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.FFF")
-                        };
-                        DapperBasis db = new DapperBasis();
-                        int rowsAffected = db.ExecuteQuery(qryAddBook, paramAddBook);
-                        DialogResult result = MessageBox.Show($"Book {txtBookTitle.Text} was updated Successfully.", "MyLibraryApp7", MessageBoxButtons.OK);
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
-
+                            MessageBox.Show("Book info are left intact, no modifications done!");
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -231,22 +260,22 @@ WHERE BookID=@BookID";
             }
         ItemFound:;
         }
-        private void FillBookInfo(int BookID)
+        private BookModel GetBookInfo(int BookID)
         {
             //query book info
-            string qryBookInfo = @"SELECT BookTitle, AuthorID, BookISBN, PublisherID, PublicationDate, GenreID, Pages, ShelfID
+            string qryBookInfo = @"SELECT BookID, BookTitle, AuthorID, BookISBN, PublisherID, PublicationDate, GenreID, Pages, ShelfID
 FROM V_MyBooks
 WHERE BookID=@BookID";
             var paramBookInfo = new { BookID = BookID };
             DapperBasis db = new DapperBasis();
-            List<ModifyBookModel> BookList = db.GetResultList<ModifyBookModel>(qryBookInfo, paramBookInfo).ToList();
-            if (BookList.Count == 0)
+            List<BookModel> BookList = db.GetResultList<BookModel>(qryBookInfo, paramBookInfo).ToList();
+            return BookList.Count == 0 ? null : BookList[0];
+        }
+        private void FillBookInfo(int BookID)
+        {
+            BookModel foundBook = GetBookInfo(BookID);
+            if (foundBook != null)
             {
-                MessageBox.Show("No Existing Book With ID " + BookID.ToString());
-            }
-            else
-            {
-                ModifyBookModel foundBook = BookList[0];
                 txtBookTitle.Text = foundBook.BookTitle;
                 SelectComboBoxItemById(cboAuthorName, foundBook.AuthorID.ToString());
                 txtISBN.Text = foundBook.BookISBN;
