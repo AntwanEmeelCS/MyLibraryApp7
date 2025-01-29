@@ -54,12 +54,16 @@ namespace MyLibraryApp7
             this.deleteAuthorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifyBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.googleBooksSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picBackground = new System.Windows.Forms.PictureBox();
-            this.modifyBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wishlistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paperpackWishlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iqraalyWishlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.storytelWishlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +75,7 @@ namespace MyLibraryApp7
             this.mnuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.assetsToolStripMenuItem,
             this.myBooksToolStripMenuItem,
+            this.wishlistsToolStripMenuItem,
             this.backupsToolStripMenuItem});
             this.mnuStripMain.Location = new System.Drawing.Point(0, 0);
             this.mnuStripMain.Name = "mnuStripMain";
@@ -273,6 +278,13 @@ namespace MyLibraryApp7
             this.addNewBookToolStripMenuItem.Text = "Add New Book";
             this.addNewBookToolStripMenuItem.Click += new System.EventHandler(this.addNewBookToolStripMenuItem_Click);
             // 
+            // modifyBookToolStripMenuItem
+            // 
+            this.modifyBookToolStripMenuItem.Name = "modifyBookToolStripMenuItem";
+            this.modifyBookToolStripMenuItem.Size = new System.Drawing.Size(455, 36);
+            this.modifyBookToolStripMenuItem.Text = "Modify Book";
+            this.modifyBookToolStripMenuItem.Click += new System.EventHandler(this.modifyBookToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -310,12 +322,34 @@ namespace MyLibraryApp7
             this.picBackground.TabIndex = 1;
             this.picBackground.TabStop = false;
             // 
-            // modifyBookToolStripMenuItem
+            // wishlistsToolStripMenuItem
             // 
-            this.modifyBookToolStripMenuItem.Name = "modifyBookToolStripMenuItem";
-            this.modifyBookToolStripMenuItem.Size = new System.Drawing.Size(455, 36);
-            this.modifyBookToolStripMenuItem.Text = "Modify Book";
-            this.modifyBookToolStripMenuItem.Click += new System.EventHandler(this.modifyBookToolStripMenuItem_Click);
+            this.wishlistsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paperpackWishlistToolStripMenuItem,
+            this.iqraalyWishlistToolStripMenuItem,
+            this.storytelWishlistToolStripMenuItem});
+            this.wishlistsToolStripMenuItem.Name = "wishlistsToolStripMenuItem";
+            this.wishlistsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.wishlistsToolStripMenuItem.Text = "Wishlists";
+            // 
+            // paperpackWishlistToolStripMenuItem
+            // 
+            this.paperpackWishlistToolStripMenuItem.Name = "paperpackWishlistToolStripMenuItem";
+            this.paperpackWishlistToolStripMenuItem.Size = new System.Drawing.Size(337, 36);
+            this.paperpackWishlistToolStripMenuItem.Text = "Paperpack Wishlist";
+            this.paperpackWishlistToolStripMenuItem.Click += new System.EventHandler(this.paperpackWishlistToolStripMenuItem_Click);
+            // 
+            // iqraalyWishlistToolStripMenuItem
+            // 
+            this.iqraalyWishlistToolStripMenuItem.Name = "iqraalyWishlistToolStripMenuItem";
+            this.iqraalyWishlistToolStripMenuItem.Size = new System.Drawing.Size(337, 36);
+            this.iqraalyWishlistToolStripMenuItem.Text = "Iqraaly Wishlist";
+            // 
+            // storytelWishlistToolStripMenuItem
+            // 
+            this.storytelWishlistToolStripMenuItem.Name = "storytelWishlistToolStripMenuItem";
+            this.storytelWishlistToolStripMenuItem.Size = new System.Drawing.Size(337, 36);
+            this.storytelWishlistToolStripMenuItem.Text = "Storytel Wishlist";
             // 
             // frmMain
             // 
@@ -374,6 +408,10 @@ namespace MyLibraryApp7
         private System.Windows.Forms.ToolStripMenuItem backupsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backupDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifyBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wishlistsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paperpackWishlistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iqraalyWishlistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem storytelWishlistToolStripMenuItem;
     }
 }
 

@@ -199,6 +199,12 @@
     <Compile Include="Forms\Shelves\frmModifyShelf.Designer.cs">
       <DependentUpon>frmModifyShelf.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Wishlists\frmPaperpackWishlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Wishlists\frmPaperpackWishlist.Designer.cs">
+      <DependentUpon>frmPaperpackWishlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Shelves\frmModifyShelf.resx">
       <DependentUpon>frmModifyShelf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Wishlists\frmPaperpackWishlist.resx">
+      <DependentUpon>frmPaperpackWishlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

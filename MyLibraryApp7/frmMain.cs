@@ -7,6 +7,7 @@ using MyLibraryApp7.Forms.MyBooks;
 using MyLibraryApp7.Forms.Publisher;
 using MyLibraryApp7.Forms.PublisherLocation;
 using MyLibraryApp7.Forms.Shelves;
+using MyLibraryApp7.Forms.Wishlists;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -389,6 +390,11 @@ namespace MyLibraryApp7
         private void modifyBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmModifyBook().Show();
+        }
+
+        private void paperpackWishlistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmPaperpackWishlist().Show();
         }
     }
 }
