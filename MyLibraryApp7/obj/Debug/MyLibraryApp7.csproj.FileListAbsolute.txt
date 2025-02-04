@@ -41,3 +41,4 @@ E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\obj\Debug\MyLibraryApp7.
 E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\obj\Debug\MyLibraryApp7.Forms.MyBooks.frmModifyBook.resources
 E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\obj\Debug\MyLibraryApp7.csproj.AssemblyReference.cache
 E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\obj\Debug\MyLibraryApp7.Forms.Wishlists.frmPaperpackWishlist.resources
+E:\MyProjects\MyLibraryApp7\MyLibraryApp7\MyLibraryApp7\obj\Debug\MyLibraryApp7.Forms.MyBooks.frmMarkAsRead.resources

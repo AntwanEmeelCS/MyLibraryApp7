@@ -57,13 +57,14 @@ namespace MyLibraryApp7
             this.modifyBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.googleBooksSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.picBackground = new System.Windows.Forms.PictureBox();
             this.wishlistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paperpackWishlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iqraalyWishlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storytelWishlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picBackground = new System.Windows.Forms.PictureBox();
+            this.markAsReadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
@@ -263,6 +264,7 @@ namespace MyLibraryApp7
             this.myBooksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewBookToolStripMenuItem,
             this.modifyBookToolStripMenuItem,
+            this.markAsReadToolStripMenuItem,
             this.toolStripMenuItem1,
             this.googleBooksSearchToolStripMenuItem});
             this.myBooksToolStripMenuItem.Name = "myBooksToolStripMenuItem";
@@ -298,30 +300,6 @@ namespace MyLibraryApp7
             this.googleBooksSearchToolStripMenuItem.Text = "Google Books Search";
             this.googleBooksSearchToolStripMenuItem.Click += new System.EventHandler(this.googleBooksSearchToolStripMenuItem_Click);
             // 
-            // backupsToolStripMenuItem
-            // 
-            this.backupsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backupDatabaseToolStripMenuItem});
-            this.backupsToolStripMenuItem.Name = "backupsToolStripMenuItem";
-            this.backupsToolStripMenuItem.Size = new System.Drawing.Size(133, 36);
-            this.backupsToolStripMenuItem.Text = "Backups";
-            // 
-            // backupDatabaseToolStripMenuItem
-            // 
-            this.backupDatabaseToolStripMenuItem.Name = "backupDatabaseToolStripMenuItem";
-            this.backupDatabaseToolStripMenuItem.Size = new System.Drawing.Size(314, 36);
-            this.backupDatabaseToolStripMenuItem.Text = "Backup Database";
-            this.backupDatabaseToolStripMenuItem.Click += new System.EventHandler(this.backupDatabaseToolStripMenuItem_Click);
-            // 
-            // picBackground
-            // 
-            this.picBackground.Location = new System.Drawing.Point(12, 43);
-            this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(289, 239);
-            this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBackground.TabIndex = 1;
-            this.picBackground.TabStop = false;
-            // 
             // wishlistsToolStripMenuItem
             // 
             this.wishlistsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -350,6 +328,37 @@ namespace MyLibraryApp7
             this.storytelWishlistToolStripMenuItem.Name = "storytelWishlistToolStripMenuItem";
             this.storytelWishlistToolStripMenuItem.Size = new System.Drawing.Size(337, 36);
             this.storytelWishlistToolStripMenuItem.Text = "Storytel Wishlist";
+            // 
+            // backupsToolStripMenuItem
+            // 
+            this.backupsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backupDatabaseToolStripMenuItem});
+            this.backupsToolStripMenuItem.Name = "backupsToolStripMenuItem";
+            this.backupsToolStripMenuItem.Size = new System.Drawing.Size(133, 36);
+            this.backupsToolStripMenuItem.Text = "Backups";
+            // 
+            // backupDatabaseToolStripMenuItem
+            // 
+            this.backupDatabaseToolStripMenuItem.Name = "backupDatabaseToolStripMenuItem";
+            this.backupDatabaseToolStripMenuItem.Size = new System.Drawing.Size(314, 36);
+            this.backupDatabaseToolStripMenuItem.Text = "Backup Database";
+            this.backupDatabaseToolStripMenuItem.Click += new System.EventHandler(this.backupDatabaseToolStripMenuItem_Click);
+            // 
+            // picBackground
+            // 
+            this.picBackground.Location = new System.Drawing.Point(12, 43);
+            this.picBackground.Name = "picBackground";
+            this.picBackground.Size = new System.Drawing.Size(289, 239);
+            this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBackground.TabIndex = 1;
+            this.picBackground.TabStop = false;
+            // 
+            // markAsReadToolStripMenuItem
+            // 
+            this.markAsReadToolStripMenuItem.Name = "markAsReadToolStripMenuItem";
+            this.markAsReadToolStripMenuItem.Size = new System.Drawing.Size(455, 36);
+            this.markAsReadToolStripMenuItem.Text = "Mark As Read";
+            this.markAsReadToolStripMenuItem.Click += new System.EventHandler(this.markAsReadToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -412,6 +421,7 @@ namespace MyLibraryApp7
         private System.Windows.Forms.ToolStripMenuItem paperpackWishlistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iqraalyWishlistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem storytelWishlistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem markAsReadToolStripMenuItem;
     }
 }
 

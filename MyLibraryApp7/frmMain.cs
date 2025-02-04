@@ -396,5 +396,10 @@ namespace MyLibraryApp7
         {
             new frmPaperpackWishlist().Show();
         }
+
+        private void markAsReadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmMarkAsRead().Show();
+        }
     }
 }

@@ -22,10 +22,20 @@ namespace MyLibraryApp7.Forms.SearchForms
             this.TableString_Field = TableString_field;
             this.Text = $"Search {this.SearchObjectName}";
         }
+        public frmLookupSearch(string TableName, string TableID_field, string TableString_field, string AdditionalConditions="")
+        {
+            InitializeComponent();
+            this.DBTableName = TableName;
+            this.TableID_Field = TableID_field;
+            this.TableString_Field = TableString_field;
+            this.Text = $"Search {this.SearchObjectName}";
+            this.AdditionalConditions = AdditionalConditions;
+        }
         public string SearchObjectName { get; set; }
         public string DBTableName { get; set; }
         public string TableID_Field { get; set; }
         public string TableString_Field { get; set; }
+        public string AdditionalConditions { get; set; }
         public enum FilterFieldName
         {
             none, ID, String
@@ -40,6 +50,10 @@ namespace MyLibraryApp7.Forms.SearchForms
             if (fieldName == FilterFieldName.String)
             {
                 qry += $"WHERE {this.TableString_Field} like '%{filterValue}%'";
+            }
+            if (this.AdditionalConditions.Trim()=="")
+            {
+                qry += "\n AND " + this.AdditionalConditions;
             }
             return qry;
         }

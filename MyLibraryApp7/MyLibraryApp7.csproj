@@ -84,6 +84,7 @@
     <Compile Include="ClassLib\GoogleBooksAPI\VolumeInfo.cs" />
     <Compile Include="ClassLib\Models\BookModel.cs" />
     <Compile Include="ClassLib\Models\BookModificationRecord.cs" />
+    <Compile Include="ClassLib\Models\BookTitleAuthor.cs" />
     <Compile Include="ClassLib\Models\ShelfItem.cs" />
     <Compile Include="Forms\AuthorNationality\frmAddNationality.cs">
       <SubType>Form</SubType>
@@ -126,6 +127,12 @@
     </Compile>
     <Compile Include="Forms\Genre\frmDeleteGenre.Designer.cs">
       <DependentUpon>frmDeleteGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyBooks\frmMarkAsRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MyBooks\frmMarkAsRead.Designer.cs">
+      <DependentUpon>frmMarkAsRead.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MyBooks\frmModifyBook.cs">
       <SubType>Form</SubType>
@@ -233,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genre\frmDeleteGenre.resx">
       <DependentUpon>frmDeleteGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyBooks\frmMarkAsRead.resx">
+      <DependentUpon>frmMarkAsRead.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyBooks\frmModifyBook.resx">
       <DependentUpon>frmModifyBook.cs</DependentUpon>
