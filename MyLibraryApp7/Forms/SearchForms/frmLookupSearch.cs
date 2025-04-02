@@ -21,6 +21,8 @@ namespace MyLibraryApp7.Forms.SearchForms
             this.TableID_Field = TableID_field;
             this.TableString_Field = TableString_field;
             this.Text = $"Search {this.SearchObjectName}";
+            //added 2025-04-02 for debugging an issue
+            this.AdditionalConditions = "";
         }
         public frmLookupSearch(string TableName, string TableID_field, string TableString_field, string AdditionalConditions="")
         {
@@ -51,7 +53,8 @@ namespace MyLibraryApp7.Forms.SearchForms
             {
                 qry += $"WHERE {this.TableString_Field} like '%{filterValue}%'";
             }
-            if (this.AdditionalConditions.Trim()=="")
+            //TODO: you should pass AdditionalConditions to the function as a FilterValue instead of directly accessing it.
+            if (this.AdditionalConditions.Trim()!="")
             {
                 qry += "\n AND " + this.AdditionalConditions;
             }

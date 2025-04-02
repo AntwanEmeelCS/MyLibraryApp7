@@ -55,6 +55,7 @@ namespace MyLibraryApp7
             this.myBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifyBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.markAsReadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.googleBooksSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wishlistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +65,7 @@ namespace MyLibraryApp7
             this.backupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picBackground = new System.Windows.Forms.PictureBox();
-            this.markAsReadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.markAsPurchasedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
@@ -287,6 +288,13 @@ namespace MyLibraryApp7
             this.modifyBookToolStripMenuItem.Text = "Modify Book";
             this.modifyBookToolStripMenuItem.Click += new System.EventHandler(this.modifyBookToolStripMenuItem_Click);
             // 
+            // markAsReadToolStripMenuItem
+            // 
+            this.markAsReadToolStripMenuItem.Name = "markAsReadToolStripMenuItem";
+            this.markAsReadToolStripMenuItem.Size = new System.Drawing.Size(455, 36);
+            this.markAsReadToolStripMenuItem.Text = "Mark As Read";
+            this.markAsReadToolStripMenuItem.Click += new System.EventHandler(this.markAsReadToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -304,6 +312,7 @@ namespace MyLibraryApp7
             // 
             this.wishlistsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.paperpackWishlistToolStripMenuItem,
+            this.markAsPurchasedToolStripMenuItem,
             this.iqraalyWishlistToolStripMenuItem,
             this.storytelWishlistToolStripMenuItem});
             this.wishlistsToolStripMenuItem.Name = "wishlistsToolStripMenuItem";
@@ -353,12 +362,12 @@ namespace MyLibraryApp7
             this.picBackground.TabIndex = 1;
             this.picBackground.TabStop = false;
             // 
-            // markAsReadToolStripMenuItem
+            // markAsPurchasedToolStripMenuItem
             // 
-            this.markAsReadToolStripMenuItem.Name = "markAsReadToolStripMenuItem";
-            this.markAsReadToolStripMenuItem.Size = new System.Drawing.Size(455, 36);
-            this.markAsReadToolStripMenuItem.Text = "Mark As Read";
-            this.markAsReadToolStripMenuItem.Click += new System.EventHandler(this.markAsReadToolStripMenuItem_Click);
+            this.markAsPurchasedToolStripMenuItem.Name = "markAsPurchasedToolStripMenuItem";
+            this.markAsPurchasedToolStripMenuItem.Size = new System.Drawing.Size(337, 36);
+            this.markAsPurchasedToolStripMenuItem.Text = "Mark as Purchased";
+            this.markAsPurchasedToolStripMenuItem.Click += new System.EventHandler(this.markAsPurchasedToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -422,6 +431,7 @@ namespace MyLibraryApp7
         private System.Windows.Forms.ToolStripMenuItem iqraalyWishlistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem storytelWishlistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem markAsReadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem markAsPurchasedToolStripMenuItem;
     }
 }
 

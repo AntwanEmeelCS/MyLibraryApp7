@@ -401,5 +401,10 @@ namespace MyLibraryApp7
         {
             new frmMarkAsRead().Show();
         }
+
+        private void markAsPurchasedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmMarkAsPurchased().Show();
+        }
     }
 }
