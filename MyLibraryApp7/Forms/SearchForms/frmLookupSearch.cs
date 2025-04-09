@@ -53,11 +53,12 @@ namespace MyLibraryApp7.Forms.SearchForms
             {
                 qry += $"WHERE {this.TableString_Field} like '%{filterValue}%'";
             }
+            //NOT USED
             //TODO: you should pass AdditionalConditions to the function as a FilterValue instead of directly accessing it.
-            if (this.AdditionalConditions.Trim()!="")
-            {
-                qry += "\n AND " + this.AdditionalConditions;
-            }
+            //if (this.AdditionalConditions.Trim()!="")
+            //{
+            //    qry += "\n AND " + this.AdditionalConditions;
+            //}
             return qry;
         }
         public List<ComboBoxItem> GetSearchResults(FilterFieldName fieldName = FilterFieldName.none, string filterValue = "")
